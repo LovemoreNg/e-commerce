@@ -1,0 +1,10 @@
+<h1>Malawi Market</h1>
+<p>add the items and price</p>
+<%= form_for :item,method: :POST,url: items_path do |f|%>
+<%= f.label :name%>
+<%= f.text_field :name,required: true %><br/><br/>
+<%= f.label :price%>
+<%= f.text_field :price,required: true %><br/><br/>
+<%= f.submit%>
+
+<%end%>

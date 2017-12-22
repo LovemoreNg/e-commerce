@@ -11,11 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171220140508) do
+ActiveRecord::Schema.define(version: 20171221141129) do
 
   create_table "customers", primary_key: "customer_id", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.string   "address",    limit: 255
+    t.boolean  "voided",     limit: 1,   default: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+  end
+
+  create_table "items", primary_key: "item_id", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.string   "price",      limit: 255
     t.boolean  "voided",     limit: 1,   default: false
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
