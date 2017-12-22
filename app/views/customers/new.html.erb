@@ -1,0 +1,10 @@
+
+<h1>Customers#new</h1>
+<p>Find me in app/views/customers/new.html.erb</p>
+<%=form_for :customer, method: :POST,url: customers_path do |f|%>
+     <%= f.label :name%>
+    <%= f.text_field :name,required: true %> <br/><br/>
+        <%= f.label :address%>
+    <%= f.text_field :address ,required: true %><br/><br/>
+    <%= f.submit %>
+<%end%>

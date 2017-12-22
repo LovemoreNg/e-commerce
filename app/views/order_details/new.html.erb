@@ -1,0 +1,11 @@
+<h1>OrderDetails#new</h1>
+<p>Find me in app/views/order_details/new.html.erb</p>
+<%=form_for :order_details, method: :POST,url: order_details_path do |f|%>
+       <%= f.label :itemId%><br/><br/>
+    <%= f.text_field :item_id,required: true %> <br/><br/>
+     <%= f.label :OrderId%><br/><br/>
+    <%= f.text_field :order_id,required: true %> <br/><br/>
+        <%= f.label :quantity%><br/><br/>
+    <%= f.text_field :quantity ,required: true %><br/><br/>
+    <%= f.submit %>
+<%end%>
