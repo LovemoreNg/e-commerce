@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20171221141323) do
+=======
+ActiveRecord::Schema.define(version: 20171220140508) do
+>>>>>>> f36af677ed62ba6d8cd7b74a3364956d1a24b920
 
   create_table "customers", primary_key: "customer_id", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -21,6 +25,7 @@ ActiveRecord::Schema.define(version: 20171221141323) do
     t.datetime "updated_at",                             null: false
   end
 
+<<<<<<< HEAD
   create_table "order_details", primary_key: "details_id", force: :cascade do |t|
     t.integer  "item_id",    limit: 4
     t.integer  "order_id",   limit: 4
@@ -29,4 +34,6 @@ ActiveRecord::Schema.define(version: 20171221141323) do
     t.datetime "updated_at",           null: false
   end
 
+=======
+>>>>>>> f36af677ed62ba6d8cd7b74a3364956d1a24b920
 end
