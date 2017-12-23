@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'items/index'
 
   get 'items/show'
@@ -6,6 +7,16 @@ Rails.application.routes.draw do
   get 'items/new'
 
   get 'items/edit'
+
+   
+  get 'order_details/index'
+
+  get 'order_details/show'
+
+  get 'order_details/new'
+
+  get 'order_details/edit'
+
 
   get 'customers/index'
 
@@ -18,7 +29,9 @@ Rails.application.routes.draw do
 get "main/main"
 root 'main#main'
 resources :customers
+
 resources :items
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

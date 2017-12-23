@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>Customers#new</h1>
 <p>Find me in app/views/customers/new.html.erb</p>
 <%=form_for :customer,method: :POST,url: customers_path do |f|%>
@@ -8,4 +9,15 @@
 <%= f.submit%>
 
 
+=======
+
+<h1>Customers#new</h1>
+<p>Find me in app/views/customers/new.html.erb</p>
+<%=form_for :customer, method: :POST,url: customers_path do |f|%>
+     <%= f.label :name%>
+    <%= f.text_field :name,required: true %> <br/><br/>
+        <%= f.label :address%>
+    <%= f.text_field :address ,required: true %><br/><br/>
+    <%= f.submit %>
+>>>>>>> e1e2b6d8778e1990926c3b4e5b52db036964e8e0
 <%end%>
