@@ -1,7 +1,7 @@
 name :<%= @customer.name%><br/><br/>
 address :<%= @customer.address %><br/><br/>
 
-<table width="90%" border="1" style="margin-left: auto;margin-right: auto;">
+<table id="orders" width="90%" border="1" style="margin-left: auto;margin-right: auto;">
   <thead>
     <tr>
       <th>
@@ -21,3 +21,9 @@ address :<%= @customer.address %><br/><br/>
     <% end %>
   </tbody>
 </table>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#orders').DataTable();
+    });
+</script>

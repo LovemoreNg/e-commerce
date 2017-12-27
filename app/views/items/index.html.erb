@@ -1,2 +1,36 @@
-<h1>Items#index</h1>
-<p>Find me in app/views/items/index.html.erb</p>
+
+<table id="items" width="90%" border="1" style="margin-left: auto;margin-right: auto;">
+  <thead>
+  <tr>
+    <th>
+      Name
+    </th>
+    <th>
+      Address
+    </th>
+    <th>
+      Actions
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  
+  <% (Item.all || []).each do |item|%>
+      <tr>
+        <td><%= item.name.titleize %></td>
+        <td><%= item.price rescue 'N/A' %></td>
+        <td>
+          <%= link_to 'View' , "/items/#{item.id}" %>
+          <%= link_to 'Edit' , "/items/#{item.id}/edit" %>
+          <%= link_to 'Delete' , "/itmes/#{item.id}/destroy" %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#items').DataTable();
+    });
+</script>

@@ -1,2 +1,35 @@
-<h1>Customers#index</h1>
-<p>Find me in app/views/customers/index.html.erb</p>
+
+<table id="customers" width="90%" border="1" style="margin-left: auto;margin-right: auto;">
+  <thead>
+  <tr>
+    <th>
+      Name
+    </th>
+    <th>
+      Address
+    </th>
+    <th>
+      Actions
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <% (@customers || []).each do |customer|%>
+      <tr>
+        <td><%= customer.name.titleize %></td>
+        <td><%= customer.address.titleize rescue 'N/A' %></td>
+        <td>
+          <%= link_to 'View' , "/customers/#{customer.id}" %>
+          <%= link_to 'Edit' , "/customers/#{customer.id}/edit" %>
+          <%= link_to 'Delete' , "/customers/#{customer.id}/destroy" %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#customers').DataTable();
+    });
+</script>
