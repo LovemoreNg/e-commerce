@@ -6,9 +6,25 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
+<body style="padding: 0px; margin: 0px;">
+<div class="header">
+  &nbsp;
+</div>
+<div style="display: table-row">
+  <div style="display: table-cell;width: 10vw; height: 86vh; background-color: #CCCCCC;">
+    <div class="tab">
+      <%= link_to 'Customers', customers_path%>
+    </div>
+    <div class="tab">
+      <%= link_to 'Orders', orders_path%>
+    </div>
+  </div>
+  <div style="display: table-cell;width: 90vw;height: 86vh;overflow: auto;">
+    <%= yield %>
+  </div>
+</div>
+<div class="footer">
+  This is our footer
+</div>
 </body>
 </html>

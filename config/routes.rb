@@ -8,14 +8,7 @@ Rails.application.routes.draw do
 
   get 'items/edit'
 
-   
-  get 'order_details/index'
 
-  get 'order_details/show'
-
-  get 'order_details/new'
-
-  get 'order_details/edit'
 
 
   get 'customers/index'
@@ -26,11 +19,13 @@ Rails.application.routes.draw do
 
   get 'customers/edit'
 
-get "main/main"
-root 'main#main'
-resources :customers
-
-resources :items
+  get "main/main"
+  root 'main#main'
+  resources :customers
+  resources :items
+  resources :orders do
+    resources :order_details
+  end
 
 
   # The priority is based upon order of creation: first created -> highest priority.
