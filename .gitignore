@@ -62,8 +62,4 @@ bower.json
 
 # Ignore Byebug command history file.
 .byebug_history
-<<<<<<< HEAD
 *.backup
-=======
-
->>>>>>> e1e2b6d8778e1990926c3b4e5b52db036964e8e0
